@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Front End",
+        "description": "Skill in building interactive and responsive user interfaces UI. With experience of HTML, CSS, Bootstrap, Tailwind, and JavaScript technologies, Focus is on creating optimal user experiences UX through clean and efficient code implementation.",
+        "link": "https://en.wikipedia.org/wiki/Front-end_web_development",
+        "image": {
+            "src": "Frontend.png",
+            "alt": "FrontEnd"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Back End",
+        "description": "Skill in building web applications using various backend technologies such as JavaScript that is Node.js, Hapi.js, Express, PHP Laravel, and Python Flask. which can build to develop server-side, API, and build full-stack applications.",
+        "link": "https://en.wikipedia.org/wiki/Web_development#Back-end_development",
+        "image": {
+            "src": "Backend.png",
+            "alt": "BackEnd"
+        }
+    },
+    {
+        "id": 3,
+        "title": "Database Engineer",
+        "description": "Skill design, manage, and optimize database systems. With mastery of ERD and LRS concepts, can create efficient database architecture designs. Have experience in using SQL MariaDB and NoSQL MongoDB, as well as database management tools.",
+        "link": "https://en.wikipedia.org/wiki/Database",
+        "image": {
+            "src": "Database.png",
+            "alt": "DataBase"
+        }
+    }
+]
