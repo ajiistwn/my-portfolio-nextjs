@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "name": "HTML",
+        "url": "https://web.dev/learn/html/overview?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fhtml%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fhtml%2Foverview",
+        "image": {
+            "src": "html.png",
+            "alt": "HTML"
+        },
+        "aos": {
+            "delay": 0
+        }
+    },
+    {
+        "id": 2,
+        "name": "CSS",
+        "url": "https://web.dev/learn/css/welcome?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Fwelcome",
+        "image": {
+            "src": "css.png",
+            "alt": "CSS"
+        },
+        "aos": {
+            "delay": 50
+        }
+    },
+    {
+        "id": 3,
+        "name": "Bootstrap",
+        "url": "https://getbootstrap.com/",
+        "image": {
+            "src": "bootstrap.png",
+            "alt": "Bootstrap"
+        },
+        "aos": {
+            "delay": 100
+        }
+    },
+    {
+        "id": 4,
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com/",
+        "image": {
+            "src": "tailwind.png",
+            "alt": "Tailwind"
+        },
+        "aos": {
+            "delay": 150
+        }
+    },
+    {
+        "id": 5,
+        "name": "Javascript",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "image": {
+            "src": "javascript.png",
+            "alt": "JavaScript"
+        },
+        "aos": {
+            "delay": 200
+        }
+    },
+    {
+        "id": 6,
+        "name": "PHP",
+        "url": "https://www.php.net/",
+        "image": {
+            "src": "php.png",
+            "alt": "PHP"
+        },
+        "aos": {
+            "delay": 250
+        }
+    },
+    {
+        "id": 7,
+        "name": "Python",
+        "url": "https://www.python.org/",
+        "image": {
+            "src": "python.png",
+            "alt": "Python"
+        },
+        "aos": {
+            "delay": 300
+        }
+    },
+    {
+        "id": 8,
+        "name": "Java",
+        "url": "https://www.oracle.com/java/",
+        "image": {
+            "src": "java.png",
+            "alt": "Java"
+        },
+        "aos": {
+            "delay": 350
+        }
+    },
+    {
+        "id": 9,
+        "name": "MySql",
+        "url": "https://www.mysql.com/",
+        "image": {
+            "src": "mysql.png",
+            "alt": "MySQL"
+        },
+        "aos": {
+            "delay": 400
+        }
+    },
+    {
+        "id": 10,
+        "name": "MariaDb",
+        "url": "https://mariadb.org/",
+        "image": {
+            "src": "mariadb.png",
+            "alt": "MariaDB"
+        },
+        "aos": {
+            "delay": 450
+        }
+    },
+    {
+        "id": 11,
+        "name": "MongoDb",
+        "url": "https://www.mongodb.com/",
+        "image": {
+            "src": "mongodb.png",
+            "alt": "MongoDB"
+        },
+        "aos": {
+            "delay": 500
+        }
+    },
+    {
+        "id": 12,
+        "name": "NodeJs",
+        "url": "https://nodejs.org/",
+        "image": {
+            "src": "nodejs.png",
+            "alt": "Node.js"
+        },
+        "aos": {
+            "delay": 550
+        }
+    },
+    {
+        "id": 13,
+        "name": "HapiJs",
+        "url": "https://hapijs.com/",
+        "image": {
+            "src": "hapijs.png",
+            "alt": "Hapi.js"
+        },
+        "aos": {
+            "delay": 600
+        }
+    },
+    {
+        "id": 14,
+        "name": "ExpressJs",
+        "url": "https://expressjs.com/",
+        "image": {
+            "src": "expressjs.png",
+            "alt": "Express.js"
+        },
+        "aos": {
+            "delay": 650
+        }
+    },
+    {
+        "id": 15,
+        "name": "Laravel",
+        "url": "https://laravel.com/",
+        "image": {
+            "src": "laravel.png",
+            "alt": "Laravel"
+        },
+        "aos": {
+            "delay": 700
+        }
+    },
+    {
+        "id": 16,
+        "name": "Flask",
+        "url": "https://flask.palletsprojects.com/",
+        "image": {
+            "src": "flask.png",
+            "alt": "Flask"
+        },
+        "aos": {
+            "delay": 750
+        }
+    },
+    {
+        "id": 17,
+        "name": "Visual Studio Code",
+        "url": "https://code.visualstudio.com/",
+        "image": {
+            "src": "vscode.png",
+            "alt": "Visual Studio Code"
+        },
+        "aos": {
+            "delay": 800
+        }
+    },
+    {
+        "id": 18,
+        "name": "Intellij IDEA",
+        "url": "https://www.jetbrains.com/idea/",
+        "image": {
+            "src": "intellijidea.png",
+            "alt": "Intellij IDEA"
+        },
+        "aos": {
+            "delay": 850
+        }
+    },
+    {
+        "id": 19,
+        "name": "Netbeans",
+        "url": "https://netbeans.apache.org/",
+        "image": {
+            "src": "netbeans.png",
+            "alt": "Netbeans"
+        },
+        "aos": {
+            "delay": 900
+        }
+    },
+    {
+        "id": 20,
+        "name": "PhpMyAdmin",
+        "url": "https://www.phpmyadmin.net/",
+        "image": {
+            "src": "phpmyadmin.png",
+            "alt": "PhpMyAdmin"
+        },
+        "aos": {
+            "delay": 950
+        }
+    },
+    {
+        "id": 21,
+        "name": "TablePlus",
+        "url": "https://tableplus.com/",
+        "image": {
+            "src": "tableplus.png",
+            "alt": "TablePlus"
+        },
+        "aos": {
+            "delay": 1000
+        }
+    },
+    {
+        "id": 22,
+        "name": "Xampp",
+        "url": "https://www.apachefriends.org/index.html",
+        "image": {
+            "src": "xampp.png",
+            "alt": "XAMPP"
+        },
+        "aos": {
+            "delay": 1050
+        }
+    },
+    {
+        "id": 23,
+        "name": "Postman",
+        "url": "https://www.postman.com/",
+        "image": {
+            "src": "postman.png",
+            "alt": "Postman"
+        },
+        "aos": {
+            "delay": 1100
+        }
+    },
+    {
+        "id": 24,
+        "name": "Git",
+        "url": "https://git-scm.com/",
+        "image": {
+            "src": "git.png",
+            "alt": "Git"
+        },
+        "aos": {
+            "delay": 1150
+        }
+    },
+    {
+        "id": 25,
+        "name": "Github",
+        "url": "https://github.com/",
+        "image": {
+            "src": "github.png",
+            "alt": "GitHub"
+        },
+        "aos": {
+            "delay": 1200
+        }
+    }
+]
