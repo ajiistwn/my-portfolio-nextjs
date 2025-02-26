@@ -5,8 +5,6 @@ import skills from "@/datas/portfolio/skills.json";
 import tools from "@/datas/portfolio/tools.json";
 
 
-
-
 export default async function SkillsPage() {
     return (
         <section id="skills" className="bg-white dark:bg-gray-900 border-box overflow-hidden">
@@ -27,7 +25,7 @@ export default async function SkillsPage() {
                                 className="text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:text-gray-300">
                                 <Link href={skill.link} target="_blank">
                                     <Image data-aos="zoom-in" width={500} height={300} style={{ width: "auto", height: "auto" }}
-                                        className="hover:scale-90 transition duration-200 ease-in-out will-transform"
+                                        className="transition duration-200 ease-in-out will-transform hover:scale-90"
                                         src={`/images/${skill.image.src}`} alt={skill.image.alt} />
                                 </Link>
                             </span>
@@ -48,7 +46,7 @@ export default async function SkillsPage() {
                     {tools.map((tool, index) => (
                         <Link key={index} data-aos="zoom-in" data-aos-delay={tool.aos.delay}
                             href={tool.url}
-                            class="flex justify-center items-center" target="_blank">
+                            className="flex justify-center items-center" target="_blank">
                             <Image className="hover:grayscale grayscale-0 transition duration-200"
                                 src={`/images/tools/${tool.image.src}`} width={100} height={100} alt={tool.image.alt} />
                         </Link>

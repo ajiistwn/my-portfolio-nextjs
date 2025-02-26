@@ -19,3 +19,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.will-transform {
+  will-change: transform;
+}
+
+.will-transform:hover {
+  transform: scale(0.9) !important;
+}
