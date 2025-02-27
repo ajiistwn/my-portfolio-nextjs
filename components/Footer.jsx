@@ -9,12 +9,13 @@ export default function Footer() {
                 <NavbarFooter />
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <Link
-                        href="mailto:ajiisetiawan09@gmail.com" className="hover:underline">Aji Setiawan</Link>. All Rights
+                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
+                        <Link
+                            href="mailto:ajiisetiawan09@gmail.com" className="hover:underline">Aji Setiawan</Link>. All Rights
                         Reserved.
                     </span>
                     <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                        <Link href="https://github.com/ajiistwn"
+                        <Link href="https://github.com/ajiistwn" aria-label="Github Aji Setiawan"
                             className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <svg data-aos="zoom-in" className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
                                 aria-hidden="true">
@@ -24,7 +25,7 @@ export default function Footer() {
                             </svg>
                         </Link>
                         <Link href="https://www.linkedin.com/in/ajiisetiawan/"
-                            className="text-gray-500 hover:text-gray-900 dark:hover:text-white ">
+                            className="text-gray-500 hover:text-gray-900 dark:hover:text-white " aria-label="Linkedin Aji Setiawan">
                             <svg data-aos="zoom-in" className="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                 <path fillRule="evenodd"
@@ -36,7 +37,7 @@ export default function Footer() {
 
                         </Link>
                         <Link href="https://www.instagram.com/ajiportofolio?igsh=dXdzejk2dzhmbmUx"
-                            className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            className="text-gray-500 hover:text-gray-900 dark:hover:text-white" aria-label="Instagram Aji Setiawan">
                             <svg data-aos="zoom-in" className="w-5 h-5 " fill="currentColor" viewBox="0 0 24 24"
                                 aria-hidden="true">
                                 <path fillRule="evenodd"

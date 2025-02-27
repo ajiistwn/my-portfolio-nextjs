@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-      <ModalAlert />
+      {/* <ModalAlert /> */}
       <HomePage />
       <AboutPage />
       <SkillsPage />

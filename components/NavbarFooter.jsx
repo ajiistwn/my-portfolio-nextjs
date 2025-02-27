@@ -29,19 +29,19 @@ export default function NavbarFooter() {
                         className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Menu</h2>
                     <ul className="text-gray-600 dark:text-gray-400">
                         <li data-aos="fade-up" className="mb-4">
-                            <Link href="#home" className="hover:underline">Home</Link>
+                            <Link href="#home" aria-label='Home link' className="hover:underline">Home</Link>
                         </li>
                         <li data-aos="fade-up" className="mb-4">
-                            <Link href={isMobile ? "#about-sm" : "#about"} className="hover:underline">About Me</Link>
+                            <Link href={isMobile ? "#about-sm" : "#about"} aria-label='About Me link' className="hover:underline">About Me</Link>
                         </li>
                         <li data-aos="fade-up" className="mb-4">
-                            <Link href="#skills" className="hover:underline">My Skills</Link>
+                            <Link href="#skills" aria-label='My Skills link' className="hover:underline">My Skills</Link>
                         </li>
                         <li data-aos="fade-up" className="mb-4">
-                            <Link href="#project" className="hover:underline">My Project</Link>
+                            <Link href="#project" aria-label='My Project link' className="hover:underline">My Project</Link>
                         </li>
                         <li data-aos="fade-up" className="mb-4">
-                            <Link href="#contact" className="hover:underline">Contact Me</Link>
+                            <Link href="#contact" aria-label='Contact Me link' className="hover:underline">Contact Me</Link>
                         </li>
                     </ul>
                 </div>
