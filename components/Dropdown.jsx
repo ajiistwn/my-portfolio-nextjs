@@ -23,8 +23,8 @@ export default function Demo({ icon }) {
         return (
 
             <Dropdown className="lg:hidden" label={icon} arrowIcon={false} >
-                <Dropdown.Item href="#Home">Home</Dropdown.Item>
-                <Dropdown.Item href="#about">About</Dropdown.Item>
+                <Dropdown.Item href="#home">Home</Dropdown.Item>
+                <Dropdown.Item href="#about-sm">About</Dropdown.Item>
                 <Dropdown.Item href="#skills">My Skills</Dropdown.Item>
                 <Dropdown.Item href="#project">My Project</Dropdown.Item>
                 <Dropdown.Item href="#contact">Contact Me</Dropdown.Item>

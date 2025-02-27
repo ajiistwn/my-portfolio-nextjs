@@ -1,7 +1,7 @@
 import HeroImage from "./HeroImage";
 export default function ImageHome() {
     return (
-        <div className="relative mb-0 lg:mt-0 lg:col-span-5 lg:flex box-border overflow-hidden ">
+        <div id="about-sm" className="relative mb-0 lg:mt-0 lg:col-span-5 lg:flex box-border overflow-hidden ">
             {/* <span className="z-[10]" data-aos="fade-up"> */}
             <HeroImage url="/images/ImageHome.png" alt="Aji Setiawan" />
             {/* </span> */}

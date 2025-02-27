@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "name": "Company Profile Ym Interior",
+        "link": "http://ym-interior.great-site.net/",
+        "description": "YM Interior company profile website. This website will serve as an online platform to introduce YM Interior to the audience.",
+        "image": {
+            "url": "yminteriorsite.png",
+            "alt": "YM Interior Website"
+        },
+        "tech": [
+            {
+                "name": "HTML",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content"
+            },
+            {
+                "name": "CSS",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"
+            },
+            {
+                "name": "JavaScript",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Rest Api Book Application",
+        "link": "https://github.com/ajiistwn/rest-api-bookSelf-application",
+        "description": "Rest api books application, final exam at coding academy Back end for beginners. with features to add book, view all book, view book by id, change book, and delete book.",
+        "image": {
+            "url": "restapibooksself.png",
+            "alt": "Rest Api Book Self Application"
+        },
+        "tech": [
+            {
+                "name": "NodeJs",
+                "url": "https://nodejs.org/en"
+            },
+            {
+                "name": "HapiJs",
+                "url": "https://hapi.dev/"
+            },
+            {
+                "name": "Nodemon",
+                "url": "https://nodemon.io/"
+            },
+            {
+                "name": "Postman",
+                "url": "https://www.postman.com/"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Implementation of Stack Data Structure in Ship Parking Application",
+        "link": "https://github.com/ajiistwn/ship-parking-application",
+        "description": "Data structure course exam, implementation of stack data structure in ship parking application with add vehicle, see vehicle in front, delete vehicle in front, and empty vehicle features. Stack data structure type is Last In, First Out which means the last element entered will be the first element to come out.",
+        "image": {
+            "url": "stackofdatastructure.png",
+            "alt": "Stack Data Structure in Ship Parking Application"
+        },
+        "tech": [
+            {
+                "name": "HTML",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content"
+            },
+            {
+                "name": "CSS",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"
+            },
+            {
+                "name": "Bootstrap",
+                "url": "https://getbootstrap.com/"
+            },
+            {
+                "name": "Python",
+                "url": "https://www.python.org/"
+            },
+            {
+                "name": "Flask",
+                "url": "https://flask.palletsprojects.com/"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Blog Page with Laravel",
+        "link": "https://github.com/ajiistwn/blog-page-with-laravel",
+        "description": "Basics of creating Laravel applications, following the WPU YouTube channel to create a Laravel blog page. SQLlite database migration, creating dummy sample data, features for viewing blogs, searching blogs by category, author and title.",
+        "image": {
+            "url": "blogpagelaravel.jpg",
+            "alt": "Blog Page with Laravel"
+        },
+        "tech": [
+            {
+                "name": "HTML",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content"
+            },
+            {
+                "name": "Tailwind",
+                "url": "https://tailwindcss.com/"
+            },
+            {
+                "name": "flowbite",
+                "url": "https://flowbite.com/#components"
+            },
+            {
+                "name": "PHP",
+                "url": "https://www.php.net/"
+            },
+            {
+                "name": "Laravel",
+                "url": "https://laravel.com/"
+            },
+            {
+                "name": "SQLlite",
+                "url": "https://www.sqlite.org/index.html"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Library Book Management System",
+        "link": "https://github.com/ajiistwn/library-book-management-system",
+        "description": "Final project of database course, development of library book management system. with features focused on book lending, namely adding loans, editing loans, and returning books, in addition there are features to add and edit books, also accompanied by login and register features. This application is specifically used by library staff.",
+        "image": {
+            "url": "librarybookmanagement.png",
+            "alt": "Library Book Management System"
+        },
+        "tech": [
+            {
+                "name": "HTML",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content"
+            },
+            {
+                "name": "Bootstrap",
+                "url": "https://getbootstrap.com/"
+            },
+            {
+                "name": "PHP",
+                "url": "https://www.php.net/"
+            },
+            {
+                "name": "MySQL",
+                "url": "https://www.mysql.com/"
+            }
+        ]
+    }
+]

@@ -1,7 +1,5 @@
-// "use client";
 import Dropdown from "../components/Dropdown";
 import IconDropdown from "./iconDropdown";
-// import Link from "./Link";
 import Link from "next/link";
 
 export default function Header() {
