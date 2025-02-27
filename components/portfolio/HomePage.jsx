@@ -1,6 +1,9 @@
 // "use client";
+import HeadingType from "./HeadingType";
 import ImageHome from "./ImageHome";
 import Link from "next/link";
+
+
 
 export default function Homepage() {
 
@@ -15,9 +18,10 @@ export default function Homepage() {
                             Aji Setiawan
                         </p>
                     </h1>
-                    <h2 className="max-w-2xl mb-4 text-xl md:text-4xl lg:text-3xl xl:text-5xl dark:text-white" data-aos-delay="100" data-aos="fade-right">
+                    {/* <h2 className="max-w-2xl mb-4 text-xl md:text-4xl lg:text-3xl xl:text-5xl dark:text-white" data-aos-delay="100" data-aos="fade-right">
                         I'm a <span className="thisText"></span>🚀
-                    </h2>
+                    </h2> */}
+                    <HeadingType />
                     <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400" data-aos-delay="200" data-aos="fade-right">
                         This website is meant to introduce myself. Here, you can find information about me and my CV, my skills and expertise, my projects, and my contact details.
                     </p>

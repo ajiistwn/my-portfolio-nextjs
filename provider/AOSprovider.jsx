@@ -9,8 +9,8 @@ export default function AOSProvider() {
     const pathname = usePathname(); // Ganti useRouter dengan usePathname
     useEffect(() => {
         AOS.init({
-            once: true,
-            duration: 800,
+            once: false,
+
         });
     }, []);
 
