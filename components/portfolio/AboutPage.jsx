@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import HeroImage from './HeroImage'
+import { Alert } from 'flowbite-react'
+import AlertMessage from '../AlertMessage'
 
 export default function AboutPage() {
     return (
         <section id="about" className="pt-0 -mt-10 mb-0 bg-white px-4 py-8 antialiased dark:bg-gray-900 lg:py-16 border-box overflow-hidden">
+            {/* <AlertMessage /> */}
             <div
                 className="mx-auto grid max-w-screen-xl rounded-lg bg-gray-50 p-4 dark:bg-gray-800 md:p-8 lg:grid-cols-12 lg:gap-8 lg:p-16 xl:gap-16">
                 <div data-aos="fade-up-right" className="lg:py-[50px] lg:px-[80px] lg:col-span-5 lg:mt-0 hidden lg:block">

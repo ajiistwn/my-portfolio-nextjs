@@ -5,14 +5,16 @@ import AboutPage from "@/components/portfolio/AboutPage";
 import SkillsPage from "@/components/portfolio/SkillsPage";
 import ProjectPage from "@/components/portfolio/ProjectPage";
 import ContactPage from "@/components/portfolio/ContactPage";
-import ModalAlert from "@/components/ModalAlert";
+import AlertMessage from "@/components/AlertMessage";
+
+
 
 
 export default function Home() {
 
   return (
     <>
-      {/* <ModalAlert /> */}
+      <AlertMessage />
       <HomePage />
       <AboutPage />
       <SkillsPage />
