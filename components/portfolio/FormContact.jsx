@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from 'react';
-import AlertMessage from '@/components/AlertMessage';
+import emailValidator from 'email-validator';
+import { Result } from 'postcss';
+
 
 export default function FormContact() {
+    // const favicon = document.querySelector("link[rel='icon']");
 
     const [formData, setFormData] = useState({
         email: "",
@@ -20,28 +23,36 @@ export default function FormContact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-
-        const response = await fetch("/api/sendmail", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        });
-        setFormData({
-            email: "",
-            subject: "",
-            message: "",
-        });
+        const faviconElement = document.querySelector("link[rel='icon']");
+        // faviconElement.href = "loading.png";
+        try {
+            const response = await fetch("/send-mail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+            if (response) {
+                faviconElement.href = "favicon.ico";
+                if (response.status === 200) {
+                    setFormData({
+                        email: "",
+                        subject: "",
+                        message: "",
+                    })
+                }
+            }
+        } catch (error) {
+            console.error("Failed to send email:", error);
+        }
 
 
     };
 
     return (
         <>
-
-            <form action="#" className="space-y-8">
+            <form className="space-y-8">
                 <div data-aos="zoom-in">
                     <label htmlFor="email"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your

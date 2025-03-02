@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
                         <Link
-                            href="mailto:ajiisetiawan09@gmail.com" className="hover:underline">Aji Setiawan</Link>. All Rights
+                            href="mailto:ajiisetiawan09@gmail.com" className="hover:underline"> Aji Setiawan</Link>. All Rights
                         Reserved.
                     </span>
                     <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">

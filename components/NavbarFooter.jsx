@@ -18,7 +18,7 @@ export default function NavbarFooter() {
     return (
         <div className="md:flex md:justify-between flex-wrap">
             <div className="mb-6 md:mr-24">
-                <Link data-aos="fade-left" href="" className="flex items-center">
+                <Link data-aos="fade-left" href="#" className="flex items-center">
                     <span
                         className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Navigations</span>
                 </Link>
@@ -44,6 +44,12 @@ export default function NavbarFooter() {
                             <Link href="#contact" aria-label='Contact Me link' className="hover:underline">Contact Me</Link>
                         </li>
                     </ul>
+                    <ul className="text-gray-600 dark:text-gray-400">
+                        <li data-aos="fade-up" className="mb-4">
+                            <Link href="/blogs" prefetch={false} aria-label='Home link' className="hover:underline">My Blogs</Link>
+                        </li>
+                    </ul>
+
                 </div>
                 <div>
                     <h2 data-aos="fade-up"

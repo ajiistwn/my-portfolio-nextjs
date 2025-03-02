@@ -29,8 +29,8 @@ export default function Demo({ icon }) {
                 <Dropdown.Item href="/#project">My Project</Dropdown.Item>
                 <Dropdown.Item href="/#contact">Contact Me</Dropdown.Item>
                 <hr />
-                <Dropdown.Item href="/blogs">Blogs</Dropdown.Item>
-                <Dropdown.Item href="/projects">Projects</Dropdown.Item>
+                <Dropdown.Item href="/blogs">My Blogs</Dropdown.Item>
+                {/* <Dropdown.Item href="/projects">Projects</Dropdown.Item> */}
             </Dropdown>
         )
     }
