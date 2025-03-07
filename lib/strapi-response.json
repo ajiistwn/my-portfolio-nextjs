@@ -1,0 +1,135 @@
+{
+  "data": [
+    {
+      "id": 13,
+      "documentId": "sz7l6kb2lrgj1g36b1klidgk",
+      "createdAt": "2025-03-04T15:25:54.485Z",
+      "updatedAt": "2025-03-06T07:57:29.481Z",
+      "publishedAt": "2025-03-06T07:57:29.971Z",
+      "locale": "en",
+      "slug": "website-fundamental-html-css-dan-java-script",
+      "title": "Website Fundamental: HTML, CSS, dan JavaScript",
+      "author": "ajiisetiawan09@gmail.com",
+      "description": "Tulisan ini berisi cerita pengalaman awal saya belajar teknologi dasar pengembangan website yaitu HTML, CSS, dan Javascript",
+      "body": "## Pengalaman Belajar Fundamental Web: HTML, CSS, dan JavaScript\n\nSaya pertama kali belajar dasar pengembangan website pada tahun 2022. Saat itu, saya mulai mengenal tiga teknologi utama dalam pengembangan web, yaitu HTML, CSS, dan JavaScript. Perjalanan ini tidak selalu mudah, tetapi sangat menyenangkan dan penuh tantangan.\n\n### Belajar HTML: Fondasi Struktur Web\n\nHTML adalah langkah pertama yang saya pelajari. Saya mulai memahami banyak tag elemen HTML dan bagaimana penggunaannya dalam membangun struktur sebuah halaman web. Dari sini, saya juga mengenal konsep **Semantik HTML**, yang membantu dalam membuat kode lebih mudah dipahami oleh mesin pencari dan pengembang lain.\n\nYang menarik, HTML memiliki begitu banyak sintaks yang mungkin belum kita sadari atau jarang digunakan. Setiap elemen memiliki fungsi tertentu, dan meskipun kita sering menggunakan yang umum seperti `<div>`, `<p>`, `<h1>`, atau `<img>`, ada banyak elemen lain yang juga sangat berguna seperti `<details>`, `<summary>`, `<figure>`, dan `<figcaption>`.\n\n### Belajar CSS: Mengatur Tampilan Website\n\nSetelah memahami struktur halaman dengan HTML, saya melanjutkan ke CSS untuk mempercantik tampilan website. Mempelajari CSS sangat menyenangkan, tetapi juga tidak selalu mudah. Salah satu tantangan terbesar yang saya hadapi adalah **layouting** dan **penempatan elemen**. CSS menawarkan banyak cara untuk mengatur tata letak, seperti menggunakan **margin**, **flexbox**, atau **grid**.\n\nHingga saat ini, saya masih lebih sering menggunakan **flexbox** karena lebih sederhana dan mudah dipahami dibandingkan grid. Flexbox memberikan fleksibilitas dalam menyusun elemen tanpa harus menggunakan banyak properti tambahan. Bagaimana dengan kalian? Apakah lebih sering menggunakan flexbox atau grid?\n\n### Belajar JavaScript: Logika dan Interaktivitas\n\nBagian yang paling menantang bagi saya adalah belajar **JavaScript**. Tidak seperti HTML dan CSS yang lebih bersifat deklaratif, JavaScript membutuhkan pemahaman logika pemrograman yang lebih dalam. Awalnya, saya harus memahami konsep **algoritma**, yang sebelumnya belum pernah saya pelajari.\n\nSalah satu tantangan besar dalam belajar JavaScript adalah memahami **alur program** yang kompleks, seperti **looping rekursif**, kondisi dengan banyak opsi, dan berbagai macam metode fungsi. Selain itu, ada banyak konsep penting dalam JavaScript yang harus dipahami, seperti **callback function**, yang sering digunakan dalam pemrograman asynchronous.\n\n### Kesimpulan\n\nBelajar fundamental web adalah perjalanan yang panjang dan menantang, tetapi sangat bermanfaat. HTML, CSS, dan JavaScript adalah tiga pilar utama dalam pengembangan web, dan menguasainya memberikan pondasi yang kuat untuk melangkah ke teknologi yang lebih kompleks. Meskipun saya telah memahami dasar-dasarnya, saya sadar bahwa selalu ada hal baru untuk dipelajari di dunia teknologi yang terus berkembang ini.\n\nBagaimana dengan pengalaman kalian dalam belajar web development? Apakah ada tantangan atau teknik favorit yang sering kalian gunakan?\n\n",
+      "tech": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+          "name": "HTML"
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+          "name": "CSS"
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          "name": "Javascript"
+        }
+      ],
+      "image": {
+        "id": 4,
+        "documentId": "nylay2cuw40u2hbll4iw5ify",
+        "url": "https://pbavcalneedsmfcjlbaf.supabase.co/storage/v1/object/public/strapi-uploads/Image Blog Website Fundamental.jpg-5594ea5bfd34fc7d6931863bb14d4e61.jpg",
+        "name": "Image Blog Website Fundamental.jpg"
+      }
+    },
+    {
+      "id": 10,
+      "documentId": "x4k7u736bkk7q8wpgu93edb0",
+      "createdAt": "2025-03-03T15:00:52.199Z",
+      "updatedAt": "2025-03-06T07:30:41.224Z",
+      "publishedAt": "2025-03-06T07:30:41.677Z",
+      "locale": "en",
+      "slug": "pengalaman-menggunakan-next-js-dalam-mengembangkan-portfolio-pribadi",
+      "title": "Pengalaman Menggunakan Next.js Dalam Mengembangkan Portfolio Pribadi",
+      "author": "ajiisetiawan09@gmail.com",
+      "description": "Ini adalah artikel tentang pengalaman saya menggunakan Next.js dalam mengembangkan website portfolio saya",
+      "body": "# Pengalaman Mengembangkan Web Portfolio dengan Next.js\n\n## Mengapa Saya Memilih Next.js?\n\nWaktu pertama kali mau bikin web portfolio, saya pengen sesuatu yang cepat, ringan, dan SEO-friendly. Setelah cari tahu sana-sini, akhirnya saya coba Next.js. Framework ini punya banyak fitur keren seperti Server-Side Rendering (SSR) dan Static Site Generation (SSG), yang katanya bisa bikin website lebih cepat dan lebih ramah di mesin pencari. Dan bener aja, setelah pakai Next.js, performa web saya jauh lebih baik\n\n## Tantangan Belajar Next.js\n\nJujur, awalnya saya agak pusing. Soalnya, kalau udah biasa pakai React, kita harus belajar beberapa konsep baru di Next.js, seperti **SSR dan SSG**. Saya sempat bingung soal:\n- Kapan harus pakai SSR atau SSG?\n- Apa bedanya dengan Client-Side Rendering (CSR)?\n- Gimana cara ngatur state di Next.js yang sering berhubungan sama API?\n\nButuh waktu buat paham, tapi setelah coba-coba dan banyak baca dokumentasi, akhirnya saya mulai ngerti.\n\n## Next.js Itu Keren, Tapi...\n\nSetelah cukup lama pakai Next.js buat web portfolio, saya ngerasain banget keunggulannya. Performanya mantap, SEO lebih gampang, dan ada banyak fitur bawaan yang memudahkan pengembangan. Tapi di sisi lain, belajarnya lumayan menantang, terutama buat yang belum biasa sama konsep **server-side dan static generation**.\n\nSelain itu, ada beberapa hal yang agak ribet kalau dibandingin sama React biasa. Misalnya, cara fetching data yang beda tergantung kebutuhan. Tapi kalau udah paham alurnya, semua jadi lebih masuk akal.\n\n## Kesimpulan\n\nMenurut saya, **Next.js adalah pilihan terbaik buat bikin web portfolio** kalau mau yang cepat, SEO-friendly, dan performa bagus. Tapi ya, siap-siap aja buat belajar lebih dalam soal SSR, SSG, dan konsep rendering yang beda dari React biasa. Kalau udah terbiasa, dijamin bakal nagih!\n\nBuat yang baru mulai, jangan takut nyoba! Makin sering eksperimen, makin cepat ngerti cara kerja Next.js. Happy coding! 🚀\n\n",
+      "tech": [
+        {
+          "url": "https://react.dev/",
+          "name": "React"
+        },
+        {
+          "url": "https://nextjs.org",
+          "name": "Next.js"
+        },
+        {
+          "url": "https://tailwindcss.com/",
+          "name": "Tailwind"
+        },
+        {
+          "url": "https://strapi.io/",
+          "name": "Strapi"
+        }
+      ],
+      "image": {
+        "id": 3,
+        "documentId": "ahrydz4d22w2jzklcw5ywhjq",
+        "url": "https://pbavcalneedsmfcjlbaf.supabase.co/storage/v1/object/public/strapi-uploads/Screenshot from 2025-03-03 21-59-43.png-586f3c6f64c64478232e2a6a57cbb49d.png",
+        "name": "Screenshot from 2025-03-03 21-59-43.png"
+      }
+    },
+    {
+      "id": 12,
+      "documentId": "ygcd476k7257vw719vahq3yg",
+      "createdAt": "2025-03-06T07:14:18.370Z",
+      "updatedAt": "2025-03-06T07:56:21.345Z",
+      "publishedAt": "2025-03-06T07:56:21.842Z",
+      "locale": "en",
+      "slug": "desain-database-erd-lrs-dan-optimasi-database-modern",
+      "title": "Desain Database: ERD, LRS, dan Optimasi Database Modern",
+      "author": "ajiisetiawan09@gmail.com",
+      "description": "Tulisan ini berisi tentang pentingnya optimasi database dari mulai desain Entity-Relationship Diagram (ERD), dan Logical Relational Schema (LRS), juga optimasi dari segi performa, fleksibilitas, juga keamanan. ",
+      "body": "# Desain Database: ERD, LRS, dan Optimasi Database Modern\n\n## Pendahuluan\n\nDalam pengembangan aplikasi modern, desain database yang baik menjadi kunci utama untuk memastikan performa yang optimal. Saya telah memiliki pengalaman dalam mendesain arsitektur database menggunakan Entity-Relationship Diagram (ERD) dan Logical Relational Schema (LRS) untuk memastikan efisiensi dan skalabilitas sistem. Selain itu, optimasi database modern juga menjadi aspek penting dalam menjaga performa aplikasi.\n\n## ERD dan LRS dalam Desain Database\n\n### 1. Entity-Relationship Diagram (ERD)\n\nERD adalah representasi visual dari struktur database yang menggambarkan hubungan antar entitas dalam sistem. Dengan ERD, kita bisa memahami bagaimana tabel-tabel dalam database berhubungan satu sama lain sebelum implementasi.\n\n**Pengalaman dalam ERD:**\n\n- Menggunakan *Draw\\.io* ataupun software lainnya untuk membuat diagram ERD.\n- Mendesain hubungan antar tabel seperti *one-to-many* dan *many-to-many* untuk mencerminkan kebutuhan bisnis.\n- Memastikan normalisasi database hingga bentuk normal ketiga (3NF) agar mengurangi duplikasi data.\n\n### 2. Logical Relational Schema (LRS)\n\nSetelah ERD selesai, langkah berikutnya adalah membuat LRS, yang merupakan representasi lebih rinci dalam bentuk tabel, atribut, dan hubungan antara tabel.\n\n**Pengalaman dalam LRS:**\n\n- Menentukan tipe data yang sesuai untuk setiap kolom guna mengoptimalkan penyimpanan.\n- Menentukan indeks yang tepat untuk mempercepat pencarian data.\n- Menyesuaikan skema dengan kebutuhan aplikasi berbasis SQL seperti MySQL dan PostgreSQL, atau bisa juga dengan NoSQL seperti MongoDB misalnya.\n\n## Optimasi Database Modern\n\nSeiring berkembangnya teknologi, database modern memerlukan optimasi agar dapat menangani jumlah data yang besar serta permintaan yang tinggi. Berikut adalah beberapa teknik optimasi yang telah saya terapkan:\n\n### 1. **Indeks dan Optimasi Pencarian**\n\n- Menggunakan indeks pada kolom *ID* sebagai *primary key* untuk memastikan pencarian lebih cepat.\n- Menerapkan indeks unik pada kolom yang membutuhkan keunikan data, seperti email atau username, guna mencegah duplikasi yang tidak diinginkan.\n\n### 2. **Partisi dan Kategorisasi Tabel**\n\n- Membagi tabel berdasarkan bentuk normal ketiga (3NF) agar data tersimpan lebih fleksibel dan sesuai dengan tempatnya.\n- Menggunakan *partitioning* untuk mengelompokkan data berdasarkan kategori tertentu, seperti transaksi berdasarkan tahun atau jenis pelanggan.\n- Mengoptimalkan struktur database dengan normalisasi yang tepat untuk mengurangi redundansi data.\n\n### 3. **Penggunaan Serverless Database**\n\n- Menggunakan **Supabase** , atau **Neon** sebagai serverless data **SQL**, atau **Atlas MongoDB** dan **Firebase** jika ingin database **NoSQL** yang memungkinkan fleksibilitas dalam mengelola database tanpa harus mengatur infrastruktur secara manual.\n- Serverless database sangat direkomendasikan untuk aplikasi modern karena mendukung skalabilitas otomatis serta mengurangi beban pengelolaan sumber daya.\n- Meskipun memiliki banyak keunggulan, penerapan serverless database membutuhkan pemahaman lebih lanjut untuk memastikan integrasi yang optimal dengan sistem yang ada.\n\n## Keuntungan dari Pendekatan Ini\n\nDengan menerapkan prinsip-prinsip desain database dan optimasi modern, saya telah merasakan beberapa manfaat utama:\n\n1. **Efisiensi Penyimpanan** – Mengurangi redundansi data dengan normalisasi yang baik dan partisi yang tepat.\n2. **Performa Lebih Cepat** – Indeks yang optimal meningkatkan kecepatan pencarian dan eksekusi query.\n3. **Keamanan dan Keandalan** – Kategorisasi tabel serta backup data memastikan database tetap aman dan dapat dipulihkan jika terjadi insiden.\n4. **Fleksibilitas dan Skalabilitas** – Serverless database memberikan kebebasan dalam mengatur sumber daya sesuai kebutuhan tanpa pengelolaan manual.\n\n## Kesimpulan\n\nDesain database yang matang dengan ERD dan LRS menjadi fondasi kuat dalam pengembangan aplikasi. Dengan menerapkan optimasi seperti indeks yang tepat, partisi dan optimasi database, serta pemanfaatan serverless database, sistem dapat bekerja lebih efisien, aman, dan fleksibel. Meskipun serverless database sangat direkomendasikan untuk mendukung perkembangan teknologi modern, implementasinya memerlukan pemahaman yang lebih dalam.\n\nJika Anda sedang merancang database untuk proyek Anda, pastikan untuk mempertimbangkan teknik-teknik ini agar aplikasi Anda lebih optimal dan siap menghadapi tantangan di masa depan.\n\n",
+      "tech": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Database",
+          "name": "Database"
+        },
+        {
+          "url": "https://app.diagrams.net/",
+          "name": "Draw.io"
+        },
+        {
+          "url": "https://www.mysql.com/",
+          "name": "MySQL"
+        },
+        {
+          "url": "https://www.sqlite.org/",
+          "name": "SQLite"
+        },
+        {
+          "url": "https://www.postgresql.org/",
+          "name": "Postgresql"
+        },
+        {
+          "url": "https://www.mongodb.com/",
+          "name": "MongoDB"
+        },
+        {
+          "url": "https://supabase.com/",
+          "name": "Supabase"
+        },
+        {
+          "url": "https://firebase.google.com/",
+          "name": "Firebase"
+        }
+      ],
+      "image": {
+        "id": 5,
+        "documentId": "enk1p8ea5ke82uuxek5sik60",
+        "url": "https://pbavcalneedsmfcjlbaf.supabase.co/storage/v1/object/public/strapi-uploads/imageDesainDatabase.png-3099724dba5ed89d5db5efac5c91659c.png",
+        "name": "imageDesainDatabase.png"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 3
+    }
+  }
+}

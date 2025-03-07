@@ -23,10 +23,10 @@ export default function CardProject({ project }) {
                 <ul className="flex flex-wrap gap-3 sm:mt-0">
                     {project.tech.map((tech, index) => (
                         <li key={index} >
-                            <a href={tech.url}
+                            <Link href={tech.url}
                                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
                                 {tech.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
