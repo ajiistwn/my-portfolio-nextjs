@@ -1,27 +1,16 @@
-"use client";
-
-import { useState } from "react";
-export default function Pagination() {
-    const [page, setPage] = useState(1);
-    const maxPage = 10;
+import Link from "next/link"
 
 
-    const handlePrevious = () => {
-        setPage(prevPage => Math.max(prevPage - 1, 1));
-    };
+export default function Pagination({ href, page, pageCount }) {
 
-
-    const handleNext = () => {
-        setPage(prevPage => prevPage + 1);
-    };
 
     return (
         <div className="bg-white py-10 text-center dark:bg-dark">
             <div>
                 <ul className="mx-auto flex w-full max-w-[415px] items-center justify-between">
                     <li>
-                        <button onClick={handlePrevious} className="inline-flex h-10 items-center justify-center gap-2 rounded-lg px-4 py-2 text-base font-medium text-dark hover:bg-gray-100 dark:text-white dark:hover:bg-white/5">
-                            <span>
+                        <Link href={page > 1 ? `${href}?page=${page - 1}` : `${href}?page=${page}`} prefetch={true} className={` ${page - 1 < 1 && 'hidden'} inline-flex h-10 items-center justify-center gap-2 rounded-lg px-4 py-2  text-base font-medium text-dark hover:bg-gray-100 dark:text-white dark:hover:bg-white/5`}>
+                            <span className="-mt-1">
                                 <svg
                                     width="17"
                                     height="17"
@@ -36,15 +25,15 @@ export default function Pagination() {
                                 </svg>
                             </span>
                             <span className="max-sm:hidden"> Previous </span>
-                        </button>
+                        </Link>
                     </li>
                     <p className="text-base font-medium text-dark dark:text-white">
-                        Page {page} to {maxPage}
+                        Page {page} to {pageCount}
                     </p>
                     <li>
-                        <button onClick={handleNext} className="inline-flex h-10 items-center justify-center gap-2 rounded-lg px-4 py-2 text-base font-medium text-dark hover:bg-gray-100 dark:text-white dark:hover:bg-white/5">
+                        <Link href={page < pageCount ? `${href}?page=${page + 1}` : `${href}?page=${page}`} prefetch={true} className={`${page + 1 > pageCount && "hidden"} inline-flex h-10 items-center justify-center gap-2 rounded-lg px-4 py-2 text-base font-medium text-dark hover:bg-gray-100 dark:text-white dark:hover:bg-white/5`}>
                             <span className="max-sm:hidden" > Next </span>
-                            <span>
+                            <span className="-mt-1" >
                                 <svg
                                     width="17"
                                     height="17"
@@ -58,7 +47,7 @@ export default function Pagination() {
                                     />
                                 </svg>
                             </span>
-                        </button>
+                        </Link>
                     </li>
                 </ul>
             </div>

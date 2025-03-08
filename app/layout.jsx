@@ -9,8 +9,11 @@ import Footer from "@/components/Footer";
 
 
 export const metadata = {
-  title: "Portfolio Aji Setiawan",
-  description: "Portfolio Aji Setiawan Software Engineer",
+  title: {
+    template: '%s | Aji Setiawan Software Engineer Indonesia',
+    default: 'Aji Setiawan Software Engineer Indonesia',
+  },
+  description: "Portfolio Aji Setiawan Software Engineer Indonesia",
 };
 
 export default function RootLayout({ children }) {

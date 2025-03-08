@@ -2,18 +2,30 @@ import { getPost } from '@/lib/post'
 import Image from 'next/image'
 import Link from 'next/link'
 
+
+export async function generateMetadata({ params }) {
+    const { slug } = await params
+    const post = await getPost(slug)
+    return {
+        title: `${post.title} | Blog |`,
+        description: `${post.description} | Blog Aji Setiawan Software Engineer Indonesia`,
+    }
+}
+
+
 export default async function BlogPage({ params }) {
     const { slug } = await params
     const post = await getPost(slug) // await for the asynchronous call to 
     if (!post) {
         console.log("Post not found")
     }
+
     return (
         <div className="flex justify-between px-5 mx-auto w-full ">
 
             <article className="mx-auto w-full max-w-4xl p-10 shadow-md rounded-xl dark:bg-dark dark:text-white">
                 <Link href={`${process.env.BASE_URL}/blogs`} prefetch={true} className="inline-flex h-10 items-center justify-center gap-2 rounded-lg text-base font-medium text-dark mb-5 hover:bg-gray-100 dark:text-white dark:hover:bg-white/5 dark:hover:text-white " >
-                    <span>
+                    <span className='-mt-1'>
                         <svg
                             width="17"
                             height="17"
@@ -29,8 +41,20 @@ export default async function BlogPage({ params }) {
                     </span>
                     <span className="max-sm:hidden"> Back </span>
                 </Link>
-                <header className="mb-4 lg:mb-6 not-format">
-                    <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">{post.title}</h1>
+                <header className="mb-2 lg:mb-6 not-format">
+                    <ul className=" mb-2 flex flex-wrap mt-auto items-center gap-x-4 gap-y-1 ">
+                        {post.tech.map((tec, index) => {
+                            return (
+                                <li key={index} className="flex items-center gap-2" >
+                                    <Link href={tec.url} className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">{tec.name}</Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
+
+                    <h1 className="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:text-4xl dark:text-white">{post.title}</h1>
+                    <p className="text-gray-500 dark:text-gray-400">{` ${post.author} - ${post.publishedAt} `}</p>
+
                 </header>
                 <Image src={post.imageUrl} alt={post.imageName} width={1024} height={800} />
                 <h2 className="">{post.title}</h2>
