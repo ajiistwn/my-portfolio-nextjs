@@ -22,14 +22,14 @@ export default function Demo({ icon }) {
     if (isMobile) {
         return (
 
-            <Dropdown className="lg:hidden" label={icon} arrowIcon={false} >
-                <Dropdown.Item href="/#home">Home</Dropdown.Item>
-                <Dropdown.Item href="/#about-sm">About</Dropdown.Item>
-                <Dropdown.Item href="/#skills">My Skills</Dropdown.Item>
-                <Dropdown.Item href="/#project">My Project</Dropdown.Item>
-                <Dropdown.Item href="/#contact">Contact Me</Dropdown.Item>
+            <Dropdown className="lg:hidden  bg-white/90" label={icon} arrowIcon={false} >
+                <Dropdown.Item href="/#home" className="dark:text-white">Home</Dropdown.Item>
+                <Dropdown.Item href="/#about-sm" className="dark:text-white">About</Dropdown.Item>
+                <Dropdown.Item href="/#skills" className="dark:text-white">My Skills</Dropdown.Item>
+                <Dropdown.Item href="/#project" className="dark:text-white">My Project</Dropdown.Item>
+                <Dropdown.Item href="/#contact" className="dark:text-white">Contact Me</Dropdown.Item>
                 <hr />
-                <Dropdown.Item href="/blogs">My Blogs</Dropdown.Item>
+                <Dropdown.Item href="/blogs" className="dark:text-white">My Blogs</Dropdown.Item>
                 {/* <Dropdown.Item href="/projects">Projects</Dropdown.Item> */}
             </Dropdown>
         )

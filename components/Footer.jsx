@@ -4,7 +4,7 @@ import NavbarFooter from "./NavbarFooter";
 
 export default function Footer() {
     return (
-        <footer className="p-10 bg-white  dark:bg-gray-800 border-box overflow-hidden">
+        <footer className="p-10 dark:bg-gray-900 border-box overflow-hidden">
             <div className="mx-auto max-w-screen-xl">
                 <NavbarFooter />
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />

@@ -21,9 +21,8 @@ export default async function BlogPage({ params }) {
     }
 
     return (
-        <div className="flex justify-between px-5 mx-auto w-full ">
-
-            <article className="mx-auto w-full max-w-4xl p-10 shadow-md rounded-xl dark:bg-dark dark:text-white">
+        <div className="flex justify-between mt-5 w-full  dark:bg-gray-900">
+            <article className="mx-auto w-full max-w-4xl p-10 shadow-md rounded-xl dark:bg-gray-800 dark:text-white dark:shadow-white-800">
                 <Link href={`${process.env.BASE_URL}/blogs`} prefetch={true} className="inline-flex h-10 items-center justify-center gap-2 rounded-lg text-base font-medium text-dark mb-5 hover:bg-gray-100 dark:text-white dark:hover:bg-white/5 dark:hover:text-white " >
                     <span className='-mt-1'>
                         <svg

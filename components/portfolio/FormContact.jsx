@@ -1,12 +1,13 @@
 "use client";
 
+import { useEffect } from "react";
 import { useState } from 'react';
-import emailValidator from 'email-validator';
-import { Result } from 'postcss';
+import { toast, ToastContainer } from 'react-toastify';
+import { sendMail } from '@/lib/sendMail';
+import "react-toastify/dist/ReactToastify.css";
 
 
 export default function FormContact() {
-    // const favicon = document.querySelector("link[rel='icon']");
 
     const [formData, setFormData] = useState({
         email: "",
@@ -23,28 +24,17 @@ export default function FormContact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const faviconElement = document.querySelector("link[rel='icon']");
-        // faviconElement.href = "loading.png";
-        try {
-            const response = await fetch("/send-mail", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
-            });
-            if (response) {
-                faviconElement.href = "favicon.ico";
-                if (response.status === 200) {
-                    setFormData({
-                        email: "",
-                        subject: "",
-                        message: "",
-                    })
-                }
-            }
-        } catch (error) {
-            console.error("Failed to send email:", error);
+        const result = await sendMail(formData)
+
+        if (result.status == 200) {
+            setFormData({
+                email: "",
+                subject: "",
+                message: "",
+            })
+            toast.success(result.message);
+        } else {
+            toast.error(result.message);
         }
 
 
@@ -52,6 +42,7 @@ export default function FormContact() {
 
     return (
         <>
+            <ToastContainer />
             <form className="space-y-8">
                 <div data-aos="zoom-in">
                     <label htmlFor="email"

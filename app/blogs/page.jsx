@@ -1,15 +1,17 @@
+// "use client";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/lib/post";
 import Pagination from "@/components/blog/Pagination";
 
-export const metadata = {
-    title: {
-        template: '%s | Blogs',
-        default: 'Blogs',
-    },
-    description: "Blogs Aji Setiawan Software Engineer Indonesia",
-};
+
+// export const metadata = {
+//     title: {
+//         template: '%s | Blogs',
+//         default: 'Blogs',
+//     },
+//     description: "Blogs Aji Setiawan Software Engineer Indonesia",
+// };
 
 
 
@@ -20,9 +22,19 @@ export default async function BlogsPage({ searchParams }) {
 
     const { datas, pagination } = await getAllPosts(1, page);
 
+    // if (datas) {
+    //     toast.success("Data success fetch"); // Notifikasi sukses
+    // }
+
 
     return (
+
+
         <section id="" className="pt-10 -mt-10 mb-0 bg-white px-4 py-8 antialiased dark:bg-gray-900 lg:py-16 border-box overflow-hidden flex justify-center min-h-screen flex-col items-center">
+            {/* <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white/70 backdrop-blur-md">
+                <div className="animate-spin rounded-full h-20 w-20 border-t-8 border-r-8 border-blue-500"></div>
+            </div> */}
+
             <div className="w-full flex flex-col items-center justify-center lg:flex-row lg:items-center  max-w-screen-xl py-10">
                 <h2 className="text-center text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl inline-block w-full lg:text-left ">{`All  ${pagination.total} Blogs`}</h2>
 
@@ -50,7 +62,7 @@ export default async function BlogsPage({ searchParams }) {
                             <div key={index} className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800 ">
                                 <div className="h-56 w-full">
                                     <Link href={`${process.env.BASE_URL}/blogs/${item.slug}`} prefetch={false} className="h-full w-full bg-gray-100 dark:bg-gray-700 block ">
-                                        <Image src={item.imageUrl} alt={item.imageName} width={500} height={300} className="mx-auto h-full object-cover dark:hidden" />
+                                        <Image src={item.imageUrl} alt={item.imageName} width={500} height={300} className="mx-auto h-full object-cover" />
                                     </Link>
                                 </div>
                                 <div className="pt-6 flex flex-col flex-1">

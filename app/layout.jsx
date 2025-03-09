@@ -2,11 +2,8 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
-import AOSProvider from "@/provider/AOSprovider";
 import Footer from "@/components/Footer";
-
-// import "aos/dist/aos.css";
-
+import AOSProvider from "@/provider/AOSprovider";
 
 export const metadata = {
   title: {
@@ -20,13 +17,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="scroll-smooth">
-      <AOSProvider />
-      <body>
+      <body className="dark:bg-gray-900" suppressHydrationWarning>
+        <AOSProvider />
         <Header />
-        <main>
+        <main >
           {children}
         </main>
         <Footer />
+
       </body>
     </html>
   );

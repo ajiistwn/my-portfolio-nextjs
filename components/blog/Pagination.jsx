@@ -5,7 +5,7 @@ export default function Pagination({ href, page, pageCount }) {
 
 
     return (
-        <div className="bg-white py-10 text-center dark:bg-dark">
+        <div className="py-10 text-center dark:bg-dark">
             <div>
                 <ul className="mx-auto flex w-full max-w-[415px] items-center justify-between">
                     <li>
