@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 
 export default function HeadingType() {
 
     const el = useRef(null); // Simpan referensi ke elemen target
     const typed = useRef(null);
-    const [isClient, setIsClient] = useState(false);
+
 
     useEffect(() => {
         if (typeof window !== "undefined" && el.current) {
@@ -18,7 +18,7 @@ export default function HeadingType() {
                 backDelay: 2500,
                 loop: true,
             });
-            setIsClient(true)
+
         }
         return () => {
             typed.current?.destroy();
@@ -26,8 +26,8 @@ export default function HeadingType() {
     }, []);
 
     return (
-        <h2 className="max-w-2xl mb-4 text-xl md:text-4xl lg:text-3xl xl:text-5xl dark:text-white" {...(isClient && { "data-aos": "fade-right" })} {...(isClient && { "data-aos-delay": 100 })}  >
-            I'm a <span ref={el} className="thisText"></span>
+        <h2 className="max-w-2xl mb-4 text-xl md:text-4xl lg:text-3xl xl:text-5xl dark:text-white" data-aos="fade-right" data-aos-delay="200" suppressHydrationWarning >
+            I'm a <span ref={el} className="thisText" suppressHydrationWarning></span>
         </h2>
     );
 }

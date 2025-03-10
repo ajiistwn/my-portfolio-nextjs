@@ -11,16 +11,18 @@ export const metadata = {
     default: 'Aji Setiawan Software Engineer Indonesia',
   },
   description: "Portfolio Aji Setiawan Software Engineer Indonesia",
+  icon: "/favicon.ico"
+
 };
 
 export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="dark:bg-gray-900" suppressHydrationWarning>
+      <body className="dark:bg-gray-900">
         <AOSProvider />
         <Header />
-        <main >
+        <main>
           {children}
         </main>
         <Footer />

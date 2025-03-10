@@ -5,13 +5,14 @@ import { getAllPosts } from "@/lib/post";
 import Pagination from "@/components/blog/Pagination";
 
 
-// export const metadata = {
-//     title: {
-//         template: '%s | Blogs',
-//         default: 'Blogs',
-//     },
-//     description: "Blogs Aji Setiawan Software Engineer Indonesia",
-// };
+export const metadata = {
+    title: {
+        template: '%s | Blogs',
+        default: 'Blogs',
+    },
+    description: "Blogs Aji Setiawan Software Engineer Indonesia",
+    icon: "/favicon.ico"
+};
 
 
 
@@ -21,10 +22,6 @@ export default async function BlogsPage({ searchParams }) {
     const page = parseInt(param.page) || 1;
 
     const { datas, pagination } = await getAllPosts(1, page);
-
-    // if (datas) {
-    //     toast.success("Data success fetch"); // Notifikasi sukses
-    // }
 
 
     return (

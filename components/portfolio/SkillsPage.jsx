@@ -10,10 +10,10 @@ export default async function SkillsPage() {
         <section id="skills" className="bg-white dark:bg-gray-900 border-box overflow-hidden pt-10 md:pt-0 ">
             <div className="py-10 lg:py-16 mx-auto max-w-screen-xl px-4">
                 <h2 data-aos="fade-up"
-                    className="lg:mb- text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">
+                    className="lg:mb- text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl" suppressHydrationWarning>
                     My Skills</h2>
                 <p data-aos-delay="100" data-aos="fade-up"
-                    className="text-center mx-auto mt-4 mb-6 max-w-2xl font-light text-gray-500 md:mb-8 sm:text-xl dark:text-gray-400">
+                    className="text-center mx-auto mt-4 mb-6 max-w-2xl font-light text-gray-500 md:mb-8 sm:text-xl dark:text-gray-400" suppressHydrationWarning>
                     I have technological skills to support software development, here are some of the skills and
                     abilities that I have.</p>
                 {/* skills */}
@@ -26,15 +26,15 @@ export default async function SkillsPage() {
                                 <Link href={skill.link} target="_blank">
                                     <Image data-aos="zoom-in" width={500} height={300} style={{ width: "auto", height: "auto" }}
                                         className="transition duration-200 ease-in-out will-transform hover:scale-90"
-                                        src={`/images/${skill.image.src}`} alt={skill.image.alt} />
+                                        src={`/images/${skill.image.src}`} alt={skill.image.alt} suppressHydrationWarning />
                                 </Link>
                             </span>
                             <h3 data-aos-delay="100" data-aos="fade-up"
-                                className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                                className="text-2xl font-bold leading-tight text-gray-900 dark:text-white" suppressHydrationWarning>
                                 {skill.title}
                             </h3>
                             <p data-aos-delay="200" data-aos="fade-up"
-                                className="text-lg font-normal text-gray-500 dark:text-gray-400">
+                                className="text-lg font-normal text-gray-500 dark:text-gray-400" suppressHydrationWarning>
                                 {skill.description}
                             </p>
                         </div>
@@ -46,7 +46,7 @@ export default async function SkillsPage() {
                     {tools.map((tool, index) => (
                         <Link key={index} data-aos="zoom-in" data-aos-delay={tool.aos.delay}
                             href={tool.url}
-                            className="flex justify-center items-center" target="_blank">
+                            className="flex justify-center items-center" target="_blank" suppressHydrationWarning>
                             <Image className="hover:grayscale grayscale-0 transition duration-200"
                                 src={`/images/tools/${tool.image.src}`} width={100} height={100} alt={tool.image.alt} />
                         </Link>
@@ -54,7 +54,7 @@ export default async function SkillsPage() {
                 </div>
                 <Link data-aos="zoom-in"
                     href="https://drive.google.com/drive/folders/1-pw7ZKrVs-QMYCLlZdNec0QwhDjHlKPY?usp=sharing"
-                    className="mt-10 ml-5 inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 lg:ml:12 xl:mt-20 ">
+                    className="mt-10 ml-5 inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 lg:ml:12 xl:mt-20 " suppressHydrationWarning>
                     <svg className="mr-1 w-6 h-6 text-base dark:text-white" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M11 9a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" />

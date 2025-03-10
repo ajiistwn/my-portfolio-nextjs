@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function CardProject({ project }) {
     return (
         <div data-aos="fade-up"
-            className=" items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 sm:h-56">
+            className=" items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 sm:h-56" suppressHydrationWarning>
             <Link href={project.link}
                 className="block overflow-hidden sm:w-1/3 sm:h-full sm:shrink-0 sm:top-0 rounded-lg"
                 target="_blank">

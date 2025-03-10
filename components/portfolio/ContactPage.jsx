@@ -16,10 +16,10 @@ export default function ContactPage() {
                     <iframe data-aos="zoom-in" title="Google Maps Aji Setiawan"
                         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d8612.079942624863!2d106.85656975060105!3d-6.358296096618728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjEnMzQuMyJTIDEwNsKwNTEnMjguNCJF!5e0!3m2!1sid!2sid!4v1735914501815!5m2!1sid!2sid"
                         className="w-full h-48 md:h-64 rounded-lg" style={{ border: 0 }} allowFullScreen loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade" />
+                        referrerPolicy="no-referrer-when-downgrade" suppressHydrationWarning />
 
                     <ul className="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
-                        <li data-aos="fade-up">
+                        <li data-aos="fade-up" suppressHydrationWarning>
                             <Link href="https://www.google.com/maps/place/6%C2%B021'34.3%22S+106%C2%B051'28.4%22E/@-6.358296,106.85657,15z/data=!4m4!3m3!8m2!3d-6.3595278!4d106.8578889?hl=id&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D"
                                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
                                 target="_blank" rel="noreferrer">
@@ -35,7 +35,7 @@ export default function ContactPage() {
                                 <span className="ml-3">Depok Jawa barat, Indonesia</span>
                             </Link>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="100">
+                        <li data-aos="fade-up" data-aos-delay="100" suppressHydrationWarning>
                             <Link href="https://wa.me/6289636131620"
                                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
                                 target="_blank">
@@ -49,7 +49,7 @@ export default function ContactPage() {
                                 <span className="ml-3">+62 89636131620</span>
                             </Link>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="150">
+                        <li data-aos="fade-up" data-aos-delay="150" suppressHydrationWarning>
                             <Link href="mailto:ajiisetiawan09@gmail.com"
                                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
                                 target="_blank">
@@ -73,11 +73,11 @@ export default function ContactPage() {
                 </div>
                 <div className="me-auto place-self-center lg:col-span-7">
                     <h2 data-aos="fade-left"
-                        className="mb-3 mt-5 lg:-mt-2 text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-4xl">
+                        className="mb-3 mt-5 lg:-mt-2 text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-4xl" suppressHydrationWarning>
                         Contact Me
                     </h2>
                     <p data-aos="fade-left" data-aos-delay="100"
-                        className="mb-4 lg:mb-8 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Can i help you? Do
+                        className="mb-4 lg:mb-8 font-light text-gray-500 dark:text-gray-400 sm:text-xl" suppressHydrationWarning>Can i help you? Do
                         you want to send me feedback or need more details about me? Let me know. </p>
                     <FormContact />
                 </div>
