@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/lib/post";
 import Pagination from "@/components/blog/Pagination";
-
+import CardBlog from "@/components/blog/CardBlog";
 
 export const metadata = {
     title: {
@@ -27,10 +27,7 @@ export default async function BlogsPage({ searchParams }) {
     return (
 
 
-        <section id="" className="pt-10 -mt-10 mb-0 bg-white px-4 py-8 antialiased dark:bg-gray-900 lg:py-16 border-box overflow-hidden flex justify-center min-h-screen flex-col items-center">
-            {/* <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white/70 backdrop-blur-md">
-                <div className="animate-spin rounded-full h-20 w-20 border-t-8 border-r-8 border-blue-500"></div>
-            </div> */}
+        <section id="Blogs" className="pt-10 -mt-10 mb-0 bg-white px-4 py-8 antialiased dark:bg-gray-900 lg:py-16 border-box overflow-hidden flex justify-center min-h-screen flex-col items-center">
 
             <div className="w-full flex flex-col items-center justify-center lg:flex-row lg:items-center  max-w-screen-xl py-10">
                 <h2 className="text-center text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl inline-block w-full lg:text-left ">{`All  ${pagination.total} Blogs`}</h2>
@@ -56,34 +53,7 @@ export default async function BlogsPage({ searchParams }) {
                 {
                     datas.map((item, index) => {
                         return (
-                            <div key={index} className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800 ">
-                                <div className="h-56 w-full">
-                                    <Link href={`${process.env.BASE_URL}/blogs/${item.slug}`} prefetch={false} className="h-full w-full bg-gray-100 dark:bg-gray-700 block ">
-                                        <Image src={item.imageUrl} alt={item.imageName} width={500} height={300} className="mx-auto h-full object-cover" />
-                                    </Link>
-                                </div>
-                                <div className="pt-6 flex flex-col flex-1">
-
-
-                                    <Link href={`${process.env.BASE_URL}/blogs/${item.slug}`} prefetch={false} >
-                                        <h3 className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white pb-2">
-                                            {item.title}
-                                        </h3>
-                                    </Link>
-                                    <p className="pb-3">{item.description}</p>
-
-
-                                    <ul className="mt-auto flex flex-wrap mt-auto items-center gap-x-4 gap-y-1 ">
-                                        {item.tech.map((tec, index) => {
-                                            return (
-                                                <li key={index} className="flex items-center gap-2" >
-                                                    <Link href={tec.url} className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">{tec.name}</Link>
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
-                                </div>
-                            </div>
+                            <CardBlog key={index} item={item} />
                         )
                     })
                 }

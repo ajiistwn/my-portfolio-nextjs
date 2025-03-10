@@ -2,12 +2,26 @@
 
 import { useEffect } from "react";
 import { useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import { Slide, toast, ToastContainer } from 'react-toastify';
 import { sendMail } from '@/lib/sendMail';
+
 import "react-toastify/dist/ReactToastify.css";
 
+import CustomToast from '@/components/CustomToast';
 
 export default function FormContact() {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        setIsDarkMode(darkModeQuery.matches);
+
+        const handleChange = (e) => setIsDarkMode(e.matches);
+        darkModeQuery.addEventListener("change", handleChange);
+
+        return () => darkModeQuery.removeEventListener("change", handleChange);
+    }, []);
+
 
     const [formData, setFormData] = useState({
         email: "",
@@ -25,16 +39,21 @@ export default function FormContact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const result = await sendMail(formData)
+        try {
+            if (result.status == 200) {
+                setFormData({
+                    email: "",
+                    subject: "",
+                    message: "",
+                })
 
-        if (result.status == 200) {
-            setFormData({
-                email: "",
-                subject: "",
-                message: "",
-            })
-            toast.success(result.message);
-        } else {
-            toast.error(result.message);
+                toast(<CustomToast type="success" message={result.message} />);
+            } else {
+                toast(<CustomToast type="error" message={result.message} />);
+
+            }
+        } catch (error) {
+            toast(<CustomToast type="error" message={error.message} />);
         }
 
 
@@ -42,7 +61,20 @@ export default function FormContact() {
 
     return (
         <>
-            <ToastContainer />
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                hideProgressBar={true}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme={isDarkMode ? "light" : "dark"}
+                transition={Slide}
+
+            />
             <form className="space-y-8">
                 <div data-aos="zoom-in" suppressHydrationWarning>
                     <label htmlFor="email"
