@@ -1,7 +1,6 @@
 import Link from "next/link"
 import FormContact from "./FormContact"
 
-
 export default function ContactPage() {
 
     return (
@@ -79,7 +78,9 @@ export default function ContactPage() {
                     <p data-aos="fade-left" data-aos-delay="100"
                         className="mb-4 lg:mb-8 font-light text-gray-500 dark:text-gray-400 sm:text-xl" suppressHydrationWarning>Can i help you? Do
                         you want to send me feedback or need more details about me? Let me know. </p>
+                    {/* <Suspense fallback={<Loading />}> */}
                     <FormContact />
+                    {/* </Suspense> */}
                 </div>
             </div>
         </section >

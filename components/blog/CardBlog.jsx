@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function CardBlog({ item, index }) {
+export default function CardBlog({ item, index, delay }) {
     return (
-        <div key={index} className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800 ">
+        <div key={index} className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800" data-aos="fade-up" data-aos-delay={delay} suppressHydrationWarning>
             <div className="h-56 w-full">
                 <Link href={`${process.env.BASE_URL}/blogs/${item.slug}`} prefetch={false} className="h-full w-full bg-gray-100 dark:bg-gray-700 block ">
                     <Image src={item.imageUrl} alt={item.imageName} width={500} height={300} className="mx-auto h-full object-cover" />

@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { useState } from 'react';
 import { Slide, toast, ToastContainer } from 'react-toastify';
 import { sendMail } from '@/lib/sendMail';
+import Loading from "@/app/loading";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -11,12 +13,18 @@ import CustomToast from '@/components/CustomToast';
 
 export default function FormContact() {
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [captchaToken, setCaptchaToken] = useState(null);
+    const [render, setRender] = useState(0);
 
     useEffect(() => {
         const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
         setIsDarkMode(darkModeQuery.matches);
 
-        const handleChange = (e) => setIsDarkMode(e.matches);
+        const handleChange = (e) => {
+            setIsDarkMode(e.matches);
+            setRender((prev) => prev + 1);
+        };
         darkModeQuery.addEventListener("change", handleChange);
 
         return () => darkModeQuery.removeEventListener("change", handleChange);
@@ -38,14 +46,15 @@ export default function FormContact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const result = await sendMail(formData)
+        setLoading(true);
         try {
-            if (result.status == 200) {
+            const result = await sendMail({ ...formData, captchaToken });
+            if (result.status === 200) {
                 setFormData({
                     email: "",
                     subject: "",
                     message: "",
-                })
+                });
 
                 toast(<CustomToast type="success" message={result.message} />);
             } else {
@@ -54,10 +63,13 @@ export default function FormContact() {
             }
         } catch (error) {
             toast(<CustomToast type="error" message={error.message} />);
+        } finally {
+            setLoading(false);
         }
 
 
     };
+    if (loading) return <Loading />;
 
     return (
         <>
@@ -98,6 +110,14 @@ export default function FormContact() {
                     <textarea id="message" rows="6" name='message' value={formData.message} onChange={handleChange}
                         className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         placeholder="Leave a comment..."></textarea>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100" className="sm:col-span-2" suppressHydrationWarning>
+                    <ReCAPTCHA
+                        key={render}
+                        sitekey={"6Ld57-4qAAAAAAFIG8vn7SGL3PCs8vKth8n5xy_T"}
+                        onChange={(token) => setCaptchaToken(token)}
+                        theme={isDarkMode ? "dark" : "light"}
+                    />
                 </div>
                 <button data-aos="zoom-in" type="button" onClick={handleSubmit} data-modal-target="successModal"
                     data-modal-toggle="successModal"
