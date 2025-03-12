@@ -14,18 +14,18 @@ export const metadata = {
     icon: "/favicon.ico",
     description: "Blogs Aji Setiawan Software Engineer Indonesia",
     keywords: "blog aji setiawan, blog, blog aji setiawan software engineer indonesia, blog aji setiawan software engineer,",
-    authors: [{ name: "Aji Setiawan", url: process.env.BASE_URL }],
+    authors: [{ name: "Aji Setiawan", url: process.env.BASE_DOMAIN }],
     alternates: {
-        canonical: process.env.BASE_URL,
+        canonical: process.env.BASE_DOMAIN + "/blogs",
     },
     openGraph: {
         title: "Blogs Aji Setiawan Software Engineer Indonesia",
         description: "Blogs Aji Setiawan Software Engineer Indonesia",
-        url: process.env.BASE_URL,
+        url: process.env.BASE_DOMAIN,
         siteName: "Aji Setiawan's Portfolio",
         images: [
             {
-                url: `${process.env.BASE_URL}/images/ImageHome.png`,
+                url: `${process.env.BASE_DOMAIN}/images/ImageHome.png`,
                 width: 1200,
                 height: 630,
                 alt: "Aji Setiawan",
@@ -38,7 +38,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "Blogs Aji Setiawan Software Engineer Indonesia",
         description: "Blogs Aji Setiawan Software Engineer Indonesia",
-        images: [`${process.env.BASE_URL}/images/ImageHome.png`],
+        images: [`${process.env.BASE_DOMAIN}/images/ImageHome.png`],
     },
 };
 

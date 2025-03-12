@@ -12,9 +12,9 @@ export const metadata = {
   description: "Portfolio Aji Setiawan Software Engineer Indonesia",
   keywords: "aji setiawan, programmer, backend, frontend, software engineer, indonesia, portfolio, web developer,  web programmer, web engineer, web developer indonesia, web programmer indonesia, web engineer indonesia, software engineer indonesia, software developer indonesia, software programmer, database, database engineer, database developer, database programmer, database engineer indonesia, database developer indonesia, database programmer indonesia, aji setiawan software engineer, aji setiawan software developer, aji setiawan software programmer, aji setiawan software engineer indonesia, aji setiawan software developer indonesia, aji setiawan software programmer indonesia, aji setiawan web developer, aji setiawan web programmer, aji setiawan web engineer, aji setiawan web developer indonesia, aji setiawan web programmer indonesia, aji setiawan web engineer indonesia, aji setiawan web developer indonesia, aji setiawan web programmer indonesia, aji setiawan web engineer indonesia",
   robots: "index, follow",
-  authors: [{ name: "Aji Setiawan", url: process.env.BASE_URL }],
+  authors: [{ name: "Aji Setiawan", url: process.env.BASE_DOMAIN }],
   alternates: {
-    canonical: process.env.BASE_URL,
+    canonical: process.env.BASE_DOMAIN,
   },
   openGraph: {
     title: "Aji Setiawan Software Engineer Indonesia",
@@ -23,7 +23,7 @@ export const metadata = {
     siteName: "Aji Setiawan's Portfolio",
     images: [
       {
-        url: `${process.env.BASE_URL}/images/ImageHome.png`,
+        url: `${process.env.BASE_DOMAIN}/images/ImageHome.png`,
         width: 1200,
         height: 630,
         alt: "Aji Setiawan",
@@ -36,7 +36,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Aji Setiawan Software Engineer Indonesia",
     description: "Portfolio Aji Setiawan Software Engineer Indonesia",
-    images: [`${process.env.BASE_URL}/images/ImageHome.png`],
+    images: [`${process.env.BASE_DOMAIN}/images/ImageHome.png`],
   },
 
 };

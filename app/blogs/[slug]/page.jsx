@@ -7,6 +7,16 @@ export async function generateMetadata({ params }) {
     const { slug } = await params
     const post = await getPost(slug)
 
+    if (!post) {
+        return {
+            title: "Blog Tidak Ditemukan | Blog Aji Setiawan Software Engineer Indonesia",
+            description: "Halaman blog tidak ditemukan",
+            icons: {
+                icon: "/favicon.ico",
+            },
+        };
+    }
+
     return {
         title: `${post.title} | Blog |`,
         description: `${post.description} | Blog Aji Setiawan Software Engineer Indonesia`,
@@ -14,12 +24,12 @@ export async function generateMetadata({ params }) {
             icon: "/favicon.ico",
         },
         alternates: {
-            canonical: `${process.env.BASE_URL}/blogs/${slug}`,
+            canonical: `${process.env.BASE_DOMAIN}/blogs/${slug}`,
         },
         openGraph: {
             title: post.title,
             description: post.description,
-            url: `${process.env.BASE_URL}/blogs/${slug}`,
+            url: `${process.env.BASE_DOMAIN}/blogs/${slug}`,
             images: [
                 {
                     url: post.imageUrl,
