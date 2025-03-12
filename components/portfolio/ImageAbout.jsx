@@ -7,7 +7,7 @@ export default function ImageAbout() {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 1024); // Tailwind 'lg' = 1024px
+            setIsMobile(window.innerWidth < 1024); // Tailwind 'lg' = 1024px
         };
 
         handleResize(); // Setel saat pertama kali render

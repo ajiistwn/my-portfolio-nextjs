@@ -55,8 +55,8 @@ export default async function BlogPage({ params }) {
     const post = await getPost(slug);
 
     return (
-        <div className="flex justify-between mt-5 w-full  dark:bg-gray-900">
-            <article className="mx-auto w-full max-w-4xl p-10 shadow-md rounded-xl dark:bg-gray-800 dark:text-white dark:shadow-white-800">
+        <div className="flex justify-between mt-0  md:mt-5  w-full  dark:bg-gray-900">
+            <article className="mx-auto w-full max-w-4xl p-5 md:p-10  shadow-md rounded-xl dark:bg-gray-800 dark:text-white dark:shadow-white-800">
                 <Link href={`/blogs`} prefetch={true} className="inline-flex h-10 items-center justify-center gap-2 rounded-lg text-base font-medium text-dark mb-5 hover:bg-gray-100 dark:text-white dark:hover:bg-white/5 dark:hover:text-white " >
                     <span className='-mt-1'>
                         <svg
@@ -72,7 +72,7 @@ export default async function BlogPage({ params }) {
                             />
                         </svg>
                     </span>
-                    <span className="max-sm:hidden"> Back </span>
+                    <span className=""> Back </span>
                 </Link>
                 <header className="mb-2 lg:mb-6 not-format">
                     <ul className=" mb-2 flex flex-wrap mt-auto items-center gap-x-4 gap-y-1 ">

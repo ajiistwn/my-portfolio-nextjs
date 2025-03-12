@@ -69,6 +69,7 @@ export default function FormContact() {
 
 
     };
+    const siteKeys = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
     if (loading) return <Loading />;
 
     return (
@@ -114,7 +115,7 @@ export default function FormContact() {
                 <div data-aos="zoom-in" data-aos-delay="100" className="sm:col-span-2" suppressHydrationWarning>
                     <ReCAPTCHA
                         key={render}
-                        sitekey={"6Ld57-4qAAAAAAFIG8vn7SGL3PCs8vKth8n5xy_T"}
+                        sitekey={siteKeys}
                         onChange={(token) => setCaptchaToken(token)}
                         theme={isDarkMode ? "dark" : "light"}
                     />

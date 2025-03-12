@@ -11,7 +11,9 @@ export const metadata = {
         template: '%s | Blogs',
         default: 'Blogs',
     },
-    icon: "/favicon.ico",
+    icons: {
+        icon: "/favicon.ico",
+    },
     description: "Blogs Aji Setiawan Software Engineer Indonesia",
     keywords: "blog aji setiawan, blog, blog aji setiawan software engineer indonesia, blog aji setiawan software engineer,",
     authors: [{ name: "Aji Setiawan", url: process.env.BASE_DOMAIN }],
