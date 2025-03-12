@@ -1,25 +1,39 @@
 "use client";
 import { useEffect, useRef } from "react";
 export default function Loading() {
-
     const originalFavicon = useRef(null);
+    const faviconElement = useRef(null);
+
     useEffect(() => {
-        const favicon = document.querySelector('link[rel="icon"]');
+        let favicon = document.querySelector('link[rel="icon"]');
 
         // Simpan favicon asli jika belum tersimpan
-        if (favicon && !originalFavicon.current) {
-            originalFavicon.current = favicon.getAttribute("href");
+        if (!originalFavicon.current) {
+            originalFavicon.current = favicon ? favicon.getAttribute("href") : null;
         }
 
-        // Ganti favicon dengan loadingGif
-        if (favicon) {
-            favicon.setAttribute("href", "/loadingGif.gif");
+        // Jika favicon tidak ada, buat elemen baru
+        if (!favicon) {
+            favicon = document.createElement("link");
+            favicon.setAttribute("rel", "icon");
+            document.head.appendChild(favicon);
         }
 
-        // Saat komponen unmount atau loading selesai, kembalikan favicon asli
+        // Simpan referensi favicon yang digunakan
+        faviconElement.current = favicon;
+
+        // Set favicon ke loading GIF
+        favicon.setAttribute("href", "/loadingGif.gif");
+
+        // Saat unmount, kembalikan favicon asli dengan cache buster
         return () => {
-            if (favicon && originalFavicon.current) {
-                favicon.setAttribute("href", originalFavicon.current);
+            if (faviconElement.current) {
+                if (originalFavicon.current) {
+                    faviconElement.current.setAttribute("href", `${originalFavicon.current}?t=${Date.now()}`);
+                } else {
+                    // Jika awalnya tidak ada favicon, hapus elemen yang dibuat
+                    faviconElement.current.remove();
+                }
             }
         };
     }, []);

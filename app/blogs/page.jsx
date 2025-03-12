@@ -1,6 +1,5 @@
 // "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { getAllPosts } from "@/lib/post";
 import Pagination from "@/components/blog/Pagination";
 import CardBlog from "@/components/blog/CardBlog";
@@ -12,10 +11,36 @@ export const metadata = {
         template: '%s | Blogs',
         default: 'Blogs',
     },
+    icon: "/favicon.ico",
     description: "Blogs Aji Setiawan Software Engineer Indonesia",
-    icon: "/favicon.ico"
+    keywords: "blog aji setiawan, blog, blog aji setiawan software engineer indonesia, blog aji setiawan software engineer,",
+    authors: [{ name: "Aji Setiawan", url: process.env.BASE_URL }],
+    alternates: {
+        canonical: process.env.BASE_URL,
+    },
+    openGraph: {
+        title: "Blogs Aji Setiawan Software Engineer Indonesia",
+        description: "Blogs Aji Setiawan Software Engineer Indonesia",
+        url: process.env.BASE_URL,
+        siteName: "Aji Setiawan's Portfolio",
+        images: [
+            {
+                url: `${process.env.BASE_URL}/images/ImageHome.png`,
+                width: 1200,
+                height: 630,
+                alt: "Aji Setiawan",
+            },
+        ],
+        locale: "id_ID",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Blogs Aji Setiawan Software Engineer Indonesia",
+        description: "Blogs Aji Setiawan Software Engineer Indonesia",
+        images: [`${process.env.BASE_URL}/images/ImageHome.png`],
+    },
 };
-
 
 
 export default async function BlogsPage({ searchParams }) {

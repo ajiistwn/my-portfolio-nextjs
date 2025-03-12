@@ -6,19 +6,43 @@ import Link from 'next/link'
 export async function generateMetadata({ params }) {
     const { slug } = await params
     const post = await getPost(slug)
+
     return {
         title: `${post.title} | Blog |`,
         description: `${post.description} | Blog Aji Setiawan Software Engineer Indonesia`,
-    }
+        icons: {
+            icon: "/favicon.ico",
+        },
+        alternates: {
+            canonical: `${process.env.BASE_URL}/blogs/${slug}`,
+        },
+        openGraph: {
+            title: post.title,
+            description: post.description,
+            url: `${process.env.BASE_URL}/blogs/${slug}`,
+            images: [
+                {
+                    url: post.imageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: post.imageName,
+                },
+            ],
+            type: "article",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${post.title} | Blogs Aji Setiawan Software Engineer Indonesia`,
+            description: `${post.description} | Blogs Aji Setiawan Software Engineer Indonesia`,
+            images: [`${post.imageUrl}`],
+        },
+    };
 }
 
 
 export default async function BlogPage({ params }) {
-    const { slug } = await params
-    const post = await getPost(slug) // await for the asynchronous call to 
-    if (!post) {
-        console.log("Post not found")
-    }
+    const { slug } = await params;
+    const post = await getPost(slug);
 
     return (
         <div className="flex justify-between mt-5 w-full  dark:bg-gray-900">
@@ -55,7 +79,7 @@ export default async function BlogPage({ params }) {
                     <p className="text-gray-500 dark:text-gray-400">{` ${post.author} - ${post.publishedAt} `}</p>
 
                 </header>
-                <Image src={post.imageUrl} alt={post.imageName} width={1024} height={800} />
+                <Image src={post.imageUrl} alt={post.imageName} width={1024} height={800} priority={true} />
                 <h2 className="">{post.title}</h2>
                 <article dangerouslySetInnerHTML={{ __html: post.body }} className="max-w-screen-sm bg-gray-100 porse markdown-body" />
             </article>
