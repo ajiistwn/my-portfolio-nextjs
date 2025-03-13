@@ -18,6 +18,13 @@ const nextConfig = {
             },
         ];
     },
+    // untuk optimassi preload image dan icon
+    experimental: {
+        optimizeCss: true,
+    },
+    images: {
+        unoptimized: true, // Coba set ini untuk mencegah preload otomatis
+    },
 };
 
 export default nextConfig;

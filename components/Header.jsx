@@ -10,7 +10,7 @@ export default function Header() {
             <nav className="px-4 lg:px-6 py-2.5 ">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl ">
                     <Link href="https://github.com/ajiistwn" className="flex items-center" target="_blank">
-                        <svg className="me-1 mt-1 w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
+                        <svg className="-mt-0.5  w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path fillRule="evenodd"

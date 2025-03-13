@@ -1,6 +1,7 @@
 import { getPost } from '@/lib/post'
 import Image from 'next/image'
 import Link from 'next/link'
+import { preload } from 'react-dom'
 
 
 export async function generateMetadata({ params }) {
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }) {
                     width: 1200,
                     height: 630,
                     alt: post.imageName,
+                    preload: false,
                 },
             ],
             type: "article",
@@ -89,7 +91,7 @@ export default async function BlogPage({ params }) {
                     <p className="text-gray-500 dark:text-gray-400">{` ${post.author} - ${post.publishedAt} `}</p>
 
                 </header>
-                <Image src={post.imageUrl} alt={post.imageName} width={1024} height={800} priority={true} />
+                <Image src={post.imageUrl} alt={post.imageName} width={1024} height={800} priority={false} />
                 <h2 className="">{post.title}</h2>
                 <article dangerouslySetInnerHTML={{ __html: post.body }} className="max-w-screen-sm bg-gray-100 porse markdown-body" />
             </article>
