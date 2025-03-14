@@ -1,7 +1,6 @@
 import { getPost } from '@/lib/post'
 import Image from 'next/image'
 import Link from 'next/link'
-import { preload } from 'react-dom'
 
 
 export async function generateMetadata({ params }) {
@@ -14,15 +13,20 @@ export async function generateMetadata({ params }) {
             description: "Halaman blog tidak ditemukan",
             icons: {
                 icon: "/favicon.ico",
+                apple: "/apple-touch-icon.png",
             },
         };
     }
 
     return {
         title: `${post.title} | Blog |`,
-        description: `${post.description} | Blog Aji Setiawan Software Engineer Indonesia`,
+        description: `${post.description} | Blog Aji Setiawan`,
+        keywords: post.tech.map((tec) => tec.name).join(", ") + "," + post.title + ", Blog Aji Setiawan",
+        authors: [{ name: "Aji Setiawan", url: "https://ajisetiawan.dev" }],
+        creator: "Aji Setiawan",
         icons: {
             icon: "/favicon.ico",
+            apple: "/apple-touch-icon.png",
         },
         alternates: {
             canonical: `${process.env.BASE_DOMAIN}/blogs/${slug}`,
@@ -40,12 +44,13 @@ export async function generateMetadata({ params }) {
                     preload: false,
                 },
             ],
+            locale: "id_ID",
             type: "article",
         },
         twitter: {
             card: "summary_large_image",
-            title: `${post.title} | Blogs Aji Setiawan Software Engineer Indonesia`,
-            description: `${post.description} | Blogs Aji Setiawan Software Engineer Indonesia`,
+            title: `${post.title} | Blogs Aji Setiawan`,
+            description: `${post.description} | Blogs Aji`,
             images: [`${post.imageUrl}`],
         },
     };

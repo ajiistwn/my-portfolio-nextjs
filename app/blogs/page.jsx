@@ -11,20 +11,21 @@ export const metadata = {
         template: '%s | Blogs',
         default: 'Blogs',
     },
-    icons: {
-        icon: "/favicon.ico",
-    },
     description: "Blogs Aji Setiawan Software Engineer Indonesia",
     keywords: "blog aji setiawan, blog, blog aji setiawan software engineer indonesia, blog aji setiawan software engineer,",
-    authors: [{ name: "Aji Setiawan", url: process.env.BASE_DOMAIN }],
+    icons: {
+        icon: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
+    },
     alternates: {
         canonical: process.env.BASE_DOMAIN + "/blogs",
     },
+    authors: [{ name: "Aji Setiawan", url: process.env.BASE_DOMAIN }],
     openGraph: {
-        title: "Blogs Aji Setiawan Software Engineer Indonesia",
+        title: "Blogs Aji Setiawan",
         description: "Blogs Aji Setiawan Software Engineer Indonesia",
-        url: process.env.BASE_DOMAIN,
-        siteName: "Aji Setiawan's Portfolio",
+        url: `${process.env.BASE_DOMAIN}/blogs`,
+        siteName: "Blogs Aji Setiawan",
         images: [
             {
                 url: `${process.env.BASE_DOMAIN}/images/ImageHome.png`,
@@ -38,7 +39,7 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Blogs Aji Setiawan Software Engineer Indonesia",
+        title: "Blogs Aji Setiawan",
         description: "Blogs Aji Setiawan Software Engineer Indonesia",
         images: [`${process.env.BASE_DOMAIN}/images/ImageHome.png`],
     },

@@ -5,22 +5,26 @@ import AOSProvider from "@/provider/AOSprovider";
 
 export const metadata = {
   title: {
-    template: '%s | Aji Setiawan Software Engineer Indonesia',
-    default: 'Aji Setiawan Software Engineer Indonesia',
+    template: '%s | Aji Setiawan',
+    default: 'Aji Setiawan',
   },
-  icon: "/favicon.ico",
   description: "Portfolio Aji Setiawan Software Engineer Indonesia",
-  keywords: "aji setiawan, programmer, backend, frontend, software engineer, indonesia, portfolio, web developer,  web programmer, web engineer, web developer indonesia, web programmer indonesia, web engineer indonesia, software engineer indonesia, software developer indonesia, software programmer, database, database engineer, database developer, database programmer, database engineer indonesia, database developer indonesia, database programmer indonesia, aji setiawan software engineer, aji setiawan software developer, aji setiawan software programmer, aji setiawan software engineer indonesia, aji setiawan software developer indonesia, aji setiawan software programmer indonesia, aji setiawan web developer, aji setiawan web programmer, aji setiawan web engineer, aji setiawan web developer indonesia, aji setiawan web programmer indonesia, aji setiawan web engineer indonesia, aji setiawan web developer indonesia, aji setiawan web programmer indonesia, aji setiawan web engineer indonesia",
-  robots: "index, follow",
-  authors: [{ name: "Aji Setiawan", url: process.env.BASE_DOMAIN }],
+  keywords: "Aji Setiawan, Software Engineer, Database Engineer, Web Developer, BSI, Frontend, Backend, Fullstack,Indonesia, Portfolio",
+  authors: [{ name: "Aji Setiawan", url: "https://ajisetiawan.dev" }],
+  creator: "Aji Setiawan",
+  publisher: "Aji Setiawan",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   alternates: {
     canonical: process.env.BASE_DOMAIN,
   },
   openGraph: {
-    title: "Aji Setiawan Software Engineer Indonesia",
+    title: "Aji Setiawan",
     description: "Portfolio Aji Setiawan Software Engineer Indonesia",
     url: process.env.BASE_URL,
-    siteName: "Aji Setiawan's Portfolio",
+    siteName: "Aji Setiawan",
     images: [
       {
         url: `${process.env.BASE_DOMAIN}/images/ImageHome.png`,
@@ -34,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aji Setiawan Software Engineer Indonesia",
+    title: "Aji Setiawan",
     description: "Portfolio Aji Setiawan Software Engineer Indonesia",
     images: [`${process.env.BASE_DOMAIN}/images/ImageHome.png`],
   },
