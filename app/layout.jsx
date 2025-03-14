@@ -5,26 +5,31 @@ import AOSProvider from "@/provider/AOSprovider";
 
 export const metadata = {
   title: {
-    template: '%s | Aji Setiawan',
-    default: 'Aji Setiawan',
+    template: '%s | Aji Setiawan - Software Engineer Indonesia',
+    default: 'Aji Setiawan - Software Engineer Indonesia',
   },
   description: "Portfolio Aji Setiawan Software Engineer Indonesia",
-  keywords: "Aji Setiawan, Software Engineer, Database Engineer, Web Developer, BSI, Frontend, Backend, Fullstack,Indonesia, Portfolio",
-  authors: [{ name: "Aji Setiawan", url: "https://ajisetiawan.dev" }],
+  keywords: "Aji Setiawan, Software Engineer, Indonesia, Portfolio, aji setiawan, aji setiawan software engineer indonesia, aji setiawan indonesia, aji setiawan portfolio, web development, software projects, aji setiawan bsi, backend, frontend, fullstack, aji setiawan fullstack, aji setiawan backend, aji setiawan frontend, aji setiawan web development, aji setiawan software projects, aji setiawan bsi",
+  authors: [{ name: "Aji Setiawan", url: process.env.BASE_URL }],
   creator: "Aji Setiawan",
   publisher: "Aji Setiawan",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: `${process.env.BASE_DOMAIN}/favicon.png`,
+    apple: `${process.env.BASE_DOMAIN}/apple-touch-icon.png`,
+    shortcut: `${process.env.BASE_DOMAIN}/shortcut-icon.png`,
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: `${process.env.BASE_DOMAIN}/apple-touch-icon-precomposed.png`,
+    },
   },
   alternates: {
     canonical: process.env.BASE_DOMAIN,
   },
   openGraph: {
-    title: "Aji Setiawan",
+    title: "Aji Setiawan - Software Engineer Indonesia",
     description: "Portfolio Aji Setiawan Software Engineer Indonesia",
     url: process.env.BASE_URL,
-    siteName: "Aji Setiawan",
+    siteName: "Aji Setiawan - Software Engineer Indonesia",
     images: [
       {
         url: `${process.env.BASE_DOMAIN}/images/ImageHome.png`,
@@ -38,11 +43,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aji Setiawan",
+    title: "Aji Setiawan - Software Engineer Indonesia",
     description: "Portfolio Aji Setiawan Software Engineer Indonesia",
     images: [`${process.env.BASE_DOMAIN}/images/ImageHome.png`],
   },
-
 };
 export const viewport = {
   width: "device-width",

@@ -9,13 +9,18 @@ import SearchForm from "@/components/blog/SearchForm";
 export const metadata = {
     title: {
         template: '%s | Blogs',
-        default: 'Blogs',
+        default: 'Blogs - Aji Setiawan Software - Engineer Indonesia',
     },
     description: "Blogs Aji Setiawan Software Engineer Indonesia",
     keywords: "blog aji setiawan, blog, blog aji setiawan software engineer indonesia, blog aji setiawan software engineer,",
     icons: {
-        icon: "/favicon.ico",
-        apple: "/apple-touch-icon.png",
+        icon: `${process.env.BASE_DOMAIN}/favicon.png`,
+        apple: `${process.env.BASE_DOMAIN}/apple-touch-icon.png`,
+        shortcut: `${process.env.BASE_DOMAIN}/shortcut-icon.png`,
+        other: {
+            rel: 'apple-touch-icon-precomposed',
+            url: `${process.env.BASE_DOMAIN}/apple-touch-icon-precomposed.png`,
+        },
     },
     alternates: {
         canonical: process.env.BASE_DOMAIN + "/blogs",

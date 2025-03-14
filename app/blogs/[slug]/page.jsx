@@ -12,27 +12,37 @@ export async function generateMetadata({ params }) {
             title: "Blog Tidak Ditemukan | Blog Aji Setiawan Software Engineer Indonesia",
             description: "Halaman blog tidak ditemukan",
             icons: {
-                icon: "/favicon.ico",
-                apple: "/apple-touch-icon.png",
+                icon: `${process.env.BASE_DOMAIN}/favicon.png`,
+                apple: `${process.env.BASE_DOMAIN}/apple-touch-icon.png`,
+                shortcut: `${process.env.BASE_DOMAIN}/shortcut-icon.png`,
+                other: {
+                    rel: 'apple-touch-icon-precomposed',
+                    url: `${process.env.BASE_DOMAIN}/apple-touch-icon-precomposed.png`,
+                },
             },
         };
     }
 
     return {
         title: `${post.title} | Blog |`,
-        description: `${post.description} | Blog Aji Setiawan`,
+        description: `${post.description} | Blog Aji Setiawan - Software Engineer Indonesia`,
         keywords: post.tech.map((tec) => tec.name).join(", ") + "," + post.title + ", Blog Aji Setiawan",
-        authors: [{ name: "Aji Setiawan", url: "https://ajisetiawan.dev" }],
+        authors: [{ name: "Aji Setiawan", url: process.env.BASE_DOMAIN }],
         creator: "Aji Setiawan",
         icons: {
-            icon: "/favicon.ico",
-            apple: "/apple-touch-icon.png",
+            icon: `${process.env.BASE_DOMAIN}/favicon.ico`,
+            apple: `${process.env.BASE_DOMAIN}/apple-touch-icon.png`,
+            shortcut: `${process.env.BASE_DOMAIN}/shortcut-icon.png`,
+            other: {
+                rel: 'apple-touch-icon-precomposed',
+                url: `${process.env.BASE_DOMAIN}/apple-touch-icon-precomposed.png`,
+            },
         },
         alternates: {
             canonical: `${process.env.BASE_DOMAIN}/blogs/${slug}`,
         },
         openGraph: {
-            title: post.title,
+            title: `${post.title} | Blogs Aji Setiawan`,
             description: post.description,
             url: `${process.env.BASE_DOMAIN}/blogs/${slug}`,
             images: [
@@ -50,7 +60,7 @@ export async function generateMetadata({ params }) {
         twitter: {
             card: "summary_large_image",
             title: `${post.title} | Blogs Aji Setiawan`,
-            description: `${post.description} | Blogs Aji`,
+            description: `${post.description} | Blogs Aji Setiawan`,
             images: [`${post.imageUrl}`],
         },
     };
